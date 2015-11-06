@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="/dist/images/favicon.ico">
+		<link rel="mask-icon" href="/dist/images/favicon.ico" color="black">
+		<meta name="description" content="...">
+		<title>Process Mining</title>
+  	<link rel="stylesheet" type="text/css" href="build/css/all.min.css">
+  </head>
+
+	<body ng-controller="GraphController" class="ng-cloak">
+
+    <div class="ui inverted fixed menu">
+      <div class="item">
+        <img src="/dist/images/icon.png">
+      </div>
+      <div class="item">
+        <div class="ui input">
+          <div class="ui search selection dropdown input-menu">
+            <input type="hidden" name="node" id="name" />
+            <i class="dropdown icon"></i>
+            <div class="default text">Projeto</div>
+            <div class="menu">
+              <div ng-repeat="node in nodes" class="item" data-value="{{node.key}}" >{{node.title}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <button class="ui black button" ng-click="showAnimation('name')">Iniciar {{node}}</button>
+      </div>
+      <div class="item">
+        <div class="ui checkbox">
+          <input type="checkbox" ng-model='showConnections' ng-change='changeConnections(showConnections)'>
+          <label class="label-checkbox">Mostrar conexões</label>
+        </div>
+      </div>
+    </div>
+
+    <div id="all"></div>
+
+	  <script src="build/js/libraries.min.js"></script>
+		<script src="build/js/index.min.js"></script>
+	</body>
+</html>

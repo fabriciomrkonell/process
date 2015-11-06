@@ -1,0 +1,32 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+body, svg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  margin: 0;
+}
+
+.ui.inverted.menu {
+  border: 0px solid transparent;
+  background: #2a6496;
+  box-shadow: none;
+}
+
+#all {
+	height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.label-checkbox{
+	color: white !important;
+}
+
+.input-menu{
+	width: 350px;
+}
